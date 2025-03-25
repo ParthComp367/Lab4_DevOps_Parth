@@ -2,14 +2,14 @@ trigger:
   - main
 
 pool: 
-  name: Default # Ensure a self-hosted agent is configured
+  name: COMP367-Lab4# Ensure a self-hosted agent is configured
 
 steps:
 - task: UseDotNet@2
   inputs:
     packageType: 'sdk'
     version: '8.x'
-    installationPath: $(Agent.ToolsDirectory)/dotnet
+    installationPath: 'C:\Program Files\dotnet'
 
 - script: |
     dotnet build --configuration Release
