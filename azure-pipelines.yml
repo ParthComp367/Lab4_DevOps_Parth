@@ -14,7 +14,8 @@ steps:
   inputs:
     packageType: 'sdk'
     version: '8.x'
-    installationPath: $(Agent.ToolsDirectory)/dotnet
+    installationPath: 'C:\Program Files\dotnet'
+
 
 - script: |
     dotnet build --configuration Release
